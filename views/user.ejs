@@ -1,0 +1,153 @@
+<section>
+  <div class="container">
+    <div class="page-header my-3">
+      <a href="/users" class="btn btn-danger px-4 mx-1"> <i class="fa fa-history" aria-hidden="true"></i> Back</a>
+      <a href="/dashboard" class="btn btn-primary px-4 mx-1"> <i class="fa-solid fa-layer-group"></i> Dashboard</a>
+      <a href="/register" class="btn btn-primary px-4 mx-1"> <i class="fa-solid fa-plus"></i> Add user</a>
+    </div>
+  </div>
+
+  <!-- page container -->
+  <div class="container">
+    <div class="row">
+      <!-- page main content -->
+      <div class="col-lg-9 col-md-12">
+        <div class="main border rounded mb-5" style="padding: 10px 20px 20px 20px">
+          <div class="single-banner" style="background-image: url('<%= user.banner_photo %>')">
+            <div class="single-header">
+              <div class="row align-items-center">
+                <div class="col-lg-3">
+                  <div class="user-single-image">
+                    <img src="<%= user.profile_photo %>" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="info ms-4">
+                    <h1 class="text-white"><%= user.name %></h1>
+                    <p class="text-white"><%= user.bio %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="single-body" style="margin-top: 80px">
+            <!-- <h4 style="border-bottom: 1px solid #ddd" class="pb-3 mb-3 text-muted">About -</h4> -->
+
+            <pre class="text-left border rounded p-3 mb-4" style="background: #f9fafb; white-space: pre-wrap">
+<%= user.about %>
+</pre
+            >
+
+            <!-- contact form -->
+            <div class="contact-form-section">
+              <form
+                action="/single/<%= user.slug %>"
+                id="contact-form"
+                enctype="multipart/form-data"
+                method="POST"
+                class="border py-3 px-4 rounded mb-4"
+                style="background: #5c689109"
+              >
+                <h4 class="text-black-50">Send Email</h4>
+                <div class="mb-3">
+                  <input type="text" class="form-control mt-3" id="name" name="sender_name" placeholder="Name" />
+                </div>
+
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="user_email" name="user_email" placeholder="User email" value="<%= user.email %>" hidden />
+                  <input type="text" class="form-control" id="user_id" name="user_id" placeholder="User id" value="<%= user.id %>" hidden />
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="email" name="sender_email" placeholder="Email" />
+                </div>
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" />
+                </div>
+
+                <div class="mb-3">
+                  <textarea class="form-control" id="message" rows="7" name="message" placeholder="Message"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-primary px-4"><i class="fa-solid fa-paper-plane"></i> Send Email</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-lg-4">
+                <button class="btn btn-primary px-4" id="show-contact-form">
+                  <i class="fa-solid fa-envelope"></i> <span class="d-inline-block ms-1"></span>
+                </button>
+              </div>
+              <div class="col-lg-8 text-end">
+                <div class="social-links">
+                  <div class="social-icon-group">
+                    <ul class="mb-0">
+                      <% if (user.social.facebook ) { %>
+                      <li>
+                        <a href="<%= user.social.facebook %>"><i class="fa-brands fa-facebook-f"></i></a>
+                      </li>
+                      <% } %> <% if (user.social.twitter) { %>
+                      <li>
+                        <a href="<%= user.social.twitter %>"><i class="fa-brands fa-twitter"></i></a>
+                      </li>
+                      <% } %> <% if (user.social.instagram) { %>
+                      <li>
+                        <a href="<%= user.social.instagram %>"><i class="fa-brands fa-instagram"></i></a>
+                      </li>
+                      <% } %> <% if (user.social.linkedin) { %>
+                      <li>
+                        <a href="<%= user.social.linkedin %>"><i class="fa-brands fa-linkedin"></i></a>
+                      </li>
+                      <% } %> <% if (user.social.youtube) { %>
+                      <li>
+                        <a href="<%= user.social.youtube %>"><i class="fa-brands fa-youtube"></i></a>
+                      </li>
+                      <% } %> <% if (user.social.github) { %>
+                      <li>
+                        <a href="<%= user.social.github %>"><i class="fa-brands fa-github"></i></a>
+                      </li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- side bar -->
+      <div class="col-lg-3 col-md-12">
+        <div class="main border rounded" style="padding: 15px 15px 0 15px">
+          <div class="row">
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/ads.webp" alt="" />
+              </a>
+            </div>
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/1.gif" alt="" />
+              </a>
+            </div>
+
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/3.gif" alt="" />
+              </a>
+            </div>
+
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/2.gif" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

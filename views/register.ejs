@@ -1,0 +1,174 @@
+<section>
+  <div class="container">
+    <div class="page-header my-3">
+      <a href="/dashboard" class="btn btn-primary px-4 mx-1"> <i class="fa-solid fa-layer-group"></i> Dashboard</a>
+      <a href="/users" class="btn btn-primary px-4 mx-1"> <i class="fa-solid fa-users"></i> All Users</a>
+    </div>
+  </div>
+
+  <!-- page container -->
+  <div class="container">
+    <div class="row">
+      <!-- page main content -->
+      <div class="col-lg-9 col-md-12">
+        <div class="main border rounded mb-5" style="padding: 10px 20px">
+          <div class="single-banner banner_image_preview">
+            <div class="single-header">
+              <div class="row align-items-center">
+                <div class="col-lg-3">
+                  <div class="user-single-image">
+                    <img class="profile_image_preview" src="/assets/img/user.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="info ms-4">
+                    <h1 class="text-white name_preview">Md Zahirul Islam</h1>
+                    <p class="text-white bio_preview">Web Designer, Developer, WordPress, Shopify, Wix & Squarespace Expert</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-user-page" style="margin-top: 80px">
+            <!-- contact form -->
+            <div class="add-user-form"></div>
+            <form
+              id="register"
+              action="/register"
+              method="POST"
+              enctype="multipart/form-data"
+              class="border py-3 px-4 rounded mb-3"
+              style="background: #5c689109"
+            >
+              <div class="mb-3">
+                <input type="text" class="form-control mt-3" name="name" placeholder="Name" maxlength="30" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Email" required />
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" name="bio" placeholder="Bio" minlength="30" maxlength="100" />
+              </div>
+
+              <!-- image upload field -->
+              <div class="row">
+                <div class="col-lg-6 mb-3">
+                  <label class="text-muted" for="profile_image">Profile image</label>
+                  <input type="file" class="form-control profile_image_field" name="profile_image" id="profile_image " required />
+                </div>
+                <div class="col-lg-6 mb-3">
+                  <label class="text-muted" for="banner_image">Banner image</label>
+                  <input type="file" class="form-control banner_image_field" name="banner_image" id="banner_image" accept="image/*" required />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <textarea class="form-control" id="about-text" name="about" rows="10" minlength="500" placeholder="About text" required></textarea>
+              </div>
+
+              <!-- social links fields -->
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-facebook-f"></i></span>
+                    <input type="text" class="form-control" name="facebook" placeholder="Username" />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-twitter"></i></span>
+                    <input type="text" class="form-control" name="twitter" placeholder="Username" />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-instagram"></i></span>
+                    <input type="text" class="form-control" name="instagram" placeholder="Username" />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-linkedin"></i></span>
+                    <input type="text" class="form-control" name="linkedin" placeholder="Username" />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-youtube"></i></span>
+                    <input type="text" class="form-control" name="youtube" placeholder="Username" />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-brands fa-github"></i></span>
+                    <input type="text" class="form-control" name="github" placeholder="Username" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <div class="social-icon-group">
+                  <ul class="social-on-register-page">
+                    <li class="facebook">
+                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li class="twitter">
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="instagram">
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="linkedin">
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="youtube">
+                      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="github">
+                      <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mb-3" style="margin-top: -15px">
+                <button type="submit" class="btn btn-primary px-5">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- side bar -->
+      <div class="col-lg-3 col-md-12">
+        <div class="main border rounded" style="padding: 15px 15px 0 15px">
+          <div class="row">
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/ads.webp" alt="" />
+              </a>
+            </div>
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/1.gif" alt="" />
+              </a>
+            </div>
+
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/3.gif" alt="" />
+              </a>
+            </div>
+
+            <div class="ads">
+              <a href="https://developerzahir.com" target="_blank">
+                <img class="img-fluid rounded mb-3" src="/assets/img/2.gif" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

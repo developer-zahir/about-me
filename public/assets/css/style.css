@@ -1,0 +1,160 @@
+.btn{
+    cursor: pointer !important;
+}
+pre{
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+
+}
+.user-image{
+    position: relative;
+    overflow: hidden;
+}
+.user-image img{
+    transition: .4s;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.user-image:hover img{
+    opacity: .9;
+    filter: blur(1px);
+}
+.user-image:hover .view-details{
+    transform: translateY(-20px) !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.view-details{
+    width: 110px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px;
+    transition: .4s ;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    box-shadow: 0 7px 10px rgba(0,0,0,.2);
+}
+p.card-text {
+    height: 22px;
+    overflow: hidden;
+}
+
+/* user-single-image */
+.single-banner{
+    background: url("../img/bg.avif") center center no-repeat;
+    background-size: cover;
+    height: 350px;
+    opacity: .9;
+    margin: 10px 0;
+    border-radius:5px;
+    position: relative;
+
+}
+.single-banner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000007a;
+    z-index: 1;
+    border-radius: 10px;
+}
+.single-header{
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    z-index: 2;
+}
+
+
+.user-single-image img{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   border: 7px solid #fff;
+   object-fit: cover;
+   margin-left: 30px;
+   background: #ddd;
+}
+
+
+
+
+
+/* social-icon-group */
+.social-icon-group ul{
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding-left: 0;
+
+}
+.social-icon-group ul li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.social-icon-group ul li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background: #5c6891;
+    color: #ffffff;
+    font-size: 16px;
+    transition: .4s;
+}
+.social-icon-group ul li a:hover{
+    background: #2d4182;
+
+}
+
+
+
+
+
+
+
+
+
+/* add usr */
+.social-on-register-page li{
+    display: none !important;
+}
+.social-on-register-page li.active{
+    display: inline-block !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact fomr  */
+.contact-form-section{
+    display: none;
+}
+.contact-form-section.active{
+    display: block;
+}
